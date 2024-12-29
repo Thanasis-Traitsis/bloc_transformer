@@ -1,5 +1,5 @@
 # Flutter Bloc Transformer Events
-
+![Header](https://github.com/Thanasis-Traitsis/bloc_transformer/blob/main/assets/article/Flutter%20Bloc%20Transformer%20Events.png?raw=true)
 Hey there, Flutter devs! I see you. You've been crafting that new feature, but something feels... off. You know you got the logic right, it's pretty clear in that well-structured code you wrote. Yet somehow, your Bloc events seem to have a mind of their own. Why aren't they behaving the way you know they should?
 
 Don't worry—you're not alone. Today, we're diving into Bloc transformer events. What if I told you that in every Bloc event you build, there is a transformer running behind the scene. And what If I take it a step further and tell you that there are not one but FOUR transformers you can choose from. These little operators can drastically shape how your events are processed, and trust me, they can make or break your flow.
