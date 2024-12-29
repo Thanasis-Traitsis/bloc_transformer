@@ -2,7 +2,7 @@
 ![Header](https://github.com/Thanasis-Traitsis/bloc_transformer/blob/main/assets/article/Flutter%20Bloc%20Transformer%20Events.png?raw=true)
 Hey there, Flutter devs! I see you. You've been crafting that new feature, but something feels... off. You know you got the logic right, it's pretty clear in that well-structured code you wrote. Yet somehow, your Bloc events seem to have a mind of their own. Why aren't they behaving the way you know they should?
 
-Don't worry—you're not alone. Today, we're diving into Bloc transformer events. What if I told you that in every Bloc event you build, there is a transformer running behind the scene. And what If I take it a step further and tell you that there are not one but FOUR transformers you can choose from. These little operators can drastically shape how your events are processed, and trust me, they can make or break your flow.
+Don't worry—you're not alone. Today, we're diving into Bloc transformer events. What if I told you that in every Bloc event you build, there is a transformer running behind the scene. And what If I take it a step further and tell you that there are not one but **FOUR** transformers you can choose from. These little operators can drastically shape how your events are processed, and trust me, they can make or break your flow.
 
 So, it's time for another debugging adventure. Jump back to your code and let's solve the mystery of transformer events. By the end, you'll wonder how you ever lived without them.
 
@@ -12,7 +12,8 @@ So, it's time for another debugging adventure. Jump back to your code and let's 
 <br><br>
 Think of concurrent events like customers at a café. One customer orders a coffee and enjoys it at their own pace. While enjoying their coffee, another customer places an order without waiting for the first to finish. We can all enjoy our coffee with no problem.
 <br><br>
-In Bloc terms:
+
+In Bloc:
 - Multiple events can be processed simultaneously without waiting for the previous one to complete.
 - Events aren’t bottlenecked—each one is handled as soon as it arrives.
 
@@ -24,6 +25,7 @@ But wait, what if the café has only one chair? Suddenly, things aren’t so smo
 <br><br>
 Imagine a tiny espresso bar with just one chair and a single barista. One customer orders, sits, drinks their coffee, and only then can the next customer step up. 
 <br><br>
+
 In Bloc:
 - Events queue up and are processed sequentially.
 - No two events overlap, ensuring a predictable and orderly flow.
@@ -37,6 +39,7 @@ Okay now that we get the first two transformers out of the way, it’s time to i
 Last 
 Now, I want you to imagine that you decide to drink your coffee in the worst café of all time. You sit down, peacefully sipping your hot coffee, enjoying life. Then a new customer appears out of nowhere! Without hesitation, they snatch your cup, kick you out, and start drinking their own coffee.
 <br><br>
+
 In Bloc:
 - If multiple search queries are fired rapidly, only the latest one gets processed.
 - Any previous events still in progress are cancelled as soon as a new one arrives.
@@ -51,6 +54,7 @@ Last but not least, the final transformer event is a really interesting one. Let
 <br><br>
 Let’s visit one last café. You walk in, eager for a cup of coffee and you see another person already enjoying their drink. You sit down and start waving to place your order, but no one listens. The staff won’t take your order until the current customer finishes and leaves. Once that last drop is gone, the café is all yours, and the waiters rush to take your order.\
 <br><br>
+
 In Bloc:
 - If an event (like fetching data) is already running, new incoming events are ignored.
 - Once the active event completes, the next event will be accepted.
@@ -61,7 +65,7 @@ That's a really useful tools for situations like API calls that shouldn't be int
 
 ## Package & Code
 
-All it takes to unlock this feature is installing a package and writing just ONE line of code. Really, that's all! The rest? Just your regular Bloc setup, nothing special.
+All it takes to unlock this feature is installing a package and writing just **ONE** line of code. Really, that's all! The rest? Just your regular Bloc setup, nothing special.
 
 First, download this package:
 - [bloc_concurrency](https://pub.dev/packages/bloc_concurrency) : With this package we are able to use all of the transformer events with built in functions.
