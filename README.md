@@ -16,7 +16,7 @@ In Bloc terms:
 - Multiple events can be processed simultaneously without waiting for the previous one to complete.
 - Events aren’t bottlenecked—each one is handled as soon as it arrives.
 
-[[[[ FIRST BANNER]]]]
+![Concurrent](https://github.com/Thanasis-Traitsis/bloc_transformer/blob/main/assets/article/concurrent.png?raw=true)
 
 But wait, what if the café has only one chair? Suddenly, things aren’t so smooth. Now, each customer has to wait for the previous one to finish their coffee before placing an order.
 
@@ -28,7 +28,7 @@ In Bloc:
 - Events queue up and are processed sequentially.
 - No two events overlap, ensuring a predictable and orderly flow.
 
-[[[[ SECOND BANNER]]]]
+![Concurrent](https://github.com/Thanasis-Traitsis/bloc_transformer/blob/main/assets/article/sequential.png?raw=true)
 
 Okay now that we get the first two transformers out of the way, it’s time to introduce something that’s a total game-changer—especially for search and autocomplete features.
 
@@ -43,7 +43,7 @@ In Bloc:
 
 For real-time search, form validation, or any situation where the most recent input is prioritised, this transformer is your best option. Restartable is the best option if the most recent modification is all that matters.
 
-[[[[ THIRD BANNER]]]]
+![Concurrent](https://github.com/Thanasis-Traitsis/bloc_transformer/blob/main/assets/article/restartable.png?raw=true)
 
 Last but not least, the final transformer event is a really interesting one. Let's talk about the droppable event.
 
@@ -57,7 +57,7 @@ In Bloc:
 
 That's a really useful tools for situations like API calls that shouldn't be interrupted, or maybe for preventing duplicate submissions.
 
-[[[[ FOURTH BANNER]]]]
+![Concurrent](https://github.com/Thanasis-Traitsis/bloc_transformer/blob/main/assets/article/droppable.png?raw=true)
 
 ## Package & Code
 
@@ -97,3 +97,11 @@ If want to change the way I handle this event, by applying sequential transforme
 Bloc transformer events might look like a hidden detail at first, but as you can see they can take your state management in a whole new level. And the best part? You only need to add one line in your existing code, and change the entire functionality. How amazing is that?
 
 Now go on my Flutter friends, you are free to explore new code adventures. Next time your Bloc events aren’t behaving quite the way you expected, remember—you’ve got options. Pick the right transformer, like you pick the right café in your hometown that serves the best coffee. 😉 ☕
+
+If you enjoyed this article and want to stay connected, feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/thanasis-traitsis/).
+
+If you'd like to dive deeper into the code and contribute to the project, visit the repository on [GitHub](https://github.com/Thanasis-Traitsis/bloc_transformer).
+
+Was this guide helpful? Consider buying me a coffee!☕️ Your contribution goes a long way in fuelling future content and projects. [Buy Me a Coffee](https://www.buymeacoffee.com/thanasis_traitsis).
+
+Feel free to reach out if you have any questions or need further guidance. Cheers to your future Flutter projects!
